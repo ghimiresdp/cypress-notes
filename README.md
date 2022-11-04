@@ -10,7 +10,6 @@ Cypress notes for my students
 
 1. [Introduction](course/c01-introduction.md)
     1. Introduction to Cypress
-    2. Cypress Features
     3. Environment Setup
     4. Supported Browsers
     5. Cypress Test Runner

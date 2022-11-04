@@ -1,0 +1,11 @@
+{
+  "name": "cypress-notes",
+  "packageManager": "yarn@3.2.0",
+  "devDependencies": {
+    "cypress": "^10.11.0"
+  },
+  "scripts": {
+    "cypress:run": "cypress run",
+    "cypress:open": "cypress open"
+  }
+}
