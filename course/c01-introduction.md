@@ -11,16 +11,17 @@
 
 **Table of Contents**
 - [Chapter 1: Introduction](#chapter-1-introduction)
-    - [Introduction to Cypress](#introduction-to-cypress)
-        - [Advantages of cypress](#advantages-of-cypress)
-        - [Disadvantages of Cypress](#disadvantages-of-cypress)
-    - [Installing Cypress](#installing-cypress)
-        - [1. Installing via npm or yarn](#1-installing-via-npm-or-yarn)
-        - [2. Downloading cypress binary](#2-downloading-cypress-binary)
-    - [Opening the cypress executable](#opening-the-cypress-executable)
-        - [1. Using command line:](#1-using-command-line)
-        - [2. adding run scripts in the package.json file](#2-adding-run-scripts-in-the-packagejson-file)
-    - [Installing Visual Studio code](#installing-visual-studio-code)
+  - [Introduction to Cypress](#introduction-to-cypress)
+    - [Advantages of cypress](#advantages-of-cypress)
+    - [Disadvantages of Cypress](#disadvantages-of-cypress)
+  - [Installing Visual Studio code](#installing-visual-studio-code)
+  - [Installing Node.js](#installing-nodejs)
+  - [Installing Cypress](#installing-cypress)
+    - [1. Installing via npm or yarn](#1-installing-via-npm-or-yarn)
+    - [2. Downloading cypress binary](#2-downloading-cypress-binary)
+  - [Opening the cypress executable](#opening-the-cypress-executable)
+    - [1. Using command line:](#1-using-command-line)
+    - [2. adding run scripts in the package.json file](#2-adding-run-scripts-in-the-packagejson-file)
 
 ## Introduction to Cypress
 
@@ -60,24 +61,44 @@ for the following purposes:
 - We cannot perform Mobile testing with Cypress
 - DOM cannot be accessed
 
+## Installing Visual Studio code
+
+Although you can use any text editor to write your automation scripts, vscode
+will be much more easier since it has first-class support for javascript and is
+open source code editor. you can download and install VS Code from the following
+link:
+
+[https://code.visualstudio.com/download](https://code.visualstudio.com/download)
+
+
+## Installing Node.js
+
+As Cypress is a front-end testing framework which is built on the top of
+javascript framework, we need node.js to be installed in our system.
+
+To install Node.js we can just download the binary from
+ [https://nodejs.org](https://nodejs.org). We are strongly encouraged to
+ download the LTS version of Node.js.
 
 ## Installing Cypress
 
-As a beginner, we can install cypress by 2 different ways:
+Cypress comes both as a standalone binary and as a node.js library. As a
+beginner, we can install cypress by 2 different ways:
 
 ### 1. Installing via npm or yarn
 
-we can easily install the cypress inside our node project with the following
-command:
+We can easily install the cypress inside our workspace with `NPM` or `Yarn`.
+
+> Note: If we have not yet initialized the node project in our workspace, we can
+> simply run the command `npm init` or using yarn, we can use `yarn init`
+> command into the project path.
 
 ```shell
 $ cd your/project/path  # you can choose your project folder
-$ # if the node.js project is not initialized, you need to initialize it
-$ npm init  # If the project is not initialized
 $ npm install cypress
 
-$ # if you are a front-end developer and want to save it
-$ # as a dev dependency
+$ # if you are a front-end developer and want to save it as a dev dependency
+$ # into your existing project, then you can try the following:
 
 $ npm install cypress --save-dev
 ```
@@ -137,7 +158,7 @@ as your run configuration in your `package.json` file.
 ```json5
 {
   "name": "my-project",
-  "packageManager": "yarn@3.2.0",
+  // ...,
   "devDependencies": {
     "cypress": "^10.11.0"
   },
@@ -150,13 +171,3 @@ as your run configuration in your `package.json` file.
 > **Note**: If you do not have `package.json` file in your working directory,
 > you can initialize project running either of `npm init` or `yarn init` in
 > the terminal.
-
-
-## Installing Visual Studio code
-
-Although you can use any text editor to write your automation scripts, vscode
-will be much more easier since it has first-class support for javascript and is
-open source code editor. you can download and install VS Code from the following
-link:
-
-[https://code.visualstudio.com/download](https://code.visualstudio.com/download)
