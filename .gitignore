@@ -107,6 +107,7 @@ dist
 .idea/
 .vscode/
 .yarn/
+yarn.lock
 
 cypress/videos/
 cypress/screenshots/

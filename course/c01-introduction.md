@@ -11,17 +11,18 @@
 
 **Table of Contents**
 - [Chapter 1: Introduction](#chapter-1-introduction)
-  - [Introduction to Cypress](#introduction-to-cypress)
-    - [Advantages of cypress](#advantages-of-cypress)
-    - [Disadvantages of Cypress](#disadvantages-of-cypress)
-  - [Installing Visual Studio code](#installing-visual-studio-code)
-  - [Installing Node.js](#installing-nodejs)
-  - [Installing Cypress](#installing-cypress)
-    - [1. Installing via npm or yarn](#1-installing-via-npm-or-yarn)
-    - [2. Downloading cypress binary](#2-downloading-cypress-binary)
-  - [Opening the cypress executable](#opening-the-cypress-executable)
-    - [1. Using command line:](#1-using-command-line)
-    - [2. adding run scripts in the package.json file](#2-adding-run-scripts-in-the-packagejson-file)
+    - [Introduction to Cypress](#introduction-to-cypress)
+        - [Advantages of cypress](#advantages-of-cypress)
+        - [Disadvantages of Cypress](#disadvantages-of-cypress)
+    - [Installing Visual Studio code](#installing-visual-studio-code)
+    - [Installing Node.js](#installing-nodejs)
+    - [Installing Cypress](#installing-cypress)
+        - [1. Installing via npm or yarn](#1-installing-via-npm-or-yarn)
+        - [2. Downloading cypress binary](#2-downloading-cypress-binary)
+    - [Supported Browsers](#supported-browsers)
+    - [Opening the cypress executable](#opening-the-cypress-executable)
+        - [1. Using command line:](#1-using-command-line)
+        - [2. adding run scripts in the package.json file](#2-adding-run-scripts-in-the-packagejson-file)
 
 ## Introduction to Cypress
 
@@ -136,6 +137,17 @@ variables.
 > whenever needed_
 
 
+## Supported Browsers
+
+Cypress Supports wide varieties of browsers.
+
+1. Chromium
+2. Chrome (stable, beta, canary)
+3. Edge (stable, beta, canary)
+4. Firefox (stable, dev, nightly)
+5. Electron
+6. Webkit (Experimental)
+
 ## Opening the cypress executable
 You can easily open the cypress executable using different ways:
 
@@ -171,3 +183,7 @@ as your run configuration in your `package.json` file.
 > **Note**: If you do not have `package.json` file in your working directory,
 > you can initialize project running either of `npm init` or `yarn init` in
 > the terminal.
+
+To learn more about opening the app in cypress, you can follow the link:
+
+https://docs.cypress.io/guides/getting-started/opening-the-app
