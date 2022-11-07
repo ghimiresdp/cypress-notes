@@ -12,21 +12,22 @@ Cypress notes for my students
     1. Introduction to Cypress
     3. Environment Setup
     4. Supported Browsers
-2. [End-to-End Testing](course/c02-01-end-to-end-testing.md)
-    1. Cypress Test Runner
+2. [Cypress Hello World](course/c02-hello-world.md)
     2. Cypress Hello World
-    3. Basic Commands
-3. [Variables and Aliases](course/c02-variables.md)
-4. [Selectors and Locators]
+    3. Types of testing in cypress
+    4. Basic Commands
+3. [Cypress Command Line arguments]()
+4. [Variables and Aliases](course/c02-variables.md)
+5. [Selectors and Locators]
     1. CSS Selectors
     2. Xpath Selectors
-5. [Assertions](course/c04-assertion.md)
+6. [Assertions](course/c04-assertion.md)
     1. Implicit Assertions
     2. Explicit Assertions
     3. Other Assertions
-6.  [Text Verification]
-7.  [Promise](course/c06-promise.md)
-8.  [Testing HTML Elements](course/c07-testing-html-elements.md)
+7.  [Text Verification]
+8.  [Promise](course/c06-promise.md)
+9.  [Testing HTML Elements](course/c07-testing-html-elements.md)
     1.  Checkbox
     2.  Tabs
     3.  Dropdowns
@@ -36,16 +37,16 @@ Cypress notes for my students
     7.  Frames
     8.  Tables
     9.  File Upload
-9.  [Event Handling](course/c08-event-handling.md)
+10. [Event Handling](course/c08-event-handling.md)
     1.  Mouse Actions
     2.  File Uploads
-10. [Get and Post](course/c09-xhr.md)
+11. [API Testing](course/c09-api-testing.md)
     1.  Get Method
     2.  Post Method
-11. [Cookies](course/c10-cookies.md)
-12. [Data Driven Testing](course/c11-data-driven-testing.md)
-13. [Prompt Popup window](course)
-14. [Environment Variables](course)
-15. [Dashboards](course)
-16. [Generating Reports](course)
-17. [Plugins](course)
+12. [Cookies](course/c10-cookies.md)
+13. [Data Driven Testing](course/c11-data-driven-testing.md)
+14. [Prompt Popup window](course)
+15. [Environment Variables](course)
+16. [Dashboards](course)
+17. [Generating Reports](course)
+18. [Plugins](course)
