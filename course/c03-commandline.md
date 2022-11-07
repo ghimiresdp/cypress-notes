@@ -10,8 +10,8 @@
         - [opening specific browser with commandline](#opening-specific-browser-with-commandline)
         - [opening e2e test with command line](#opening-e2e-test-with-command-line)
     - [The `cypress run` command](#the-cypress-run-command)
-    - [selecting specification file](#selecting-specification-file)
-    - [selecting specific browser](#selecting-specific-browser)
+        - [selecting specification file](#selecting-specification-file)
+        - [selecting specific browser](#selecting-specific-browser)
     - [Adding cypress commands to `package.json`](#adding-cypress-commands-to-packagejson)
 
 
@@ -87,7 +87,7 @@ our specification.
 $ cypress run
 ```
 
-## selecting specification file
+### selecting specification file
 If we want to run specific test file only, we can pass `--spec` argument
 and the path of the specification file to run tests on.
 
@@ -96,7 +96,7 @@ Example:
 $ npx cypress run --spec cypress/e2e/spec.cy.js
 ```
 
-## selecting specific browser
+### selecting specific browser
 
 We can select specific browser to run our specification by passing
 `--browser` or `-b` argument and the supported browser. we can pass
@@ -107,6 +107,7 @@ We can select specific browser to run our specification by passing
 $ npx cypress run --browser edge
 $ npx cypress run --browser electron
 $ npx cypress run --browser electron --headed
+$ npx cypress run --browser electron --headed --spec cypress/e2e/spec.cy.js
 ```
 
 To know more about cypress `run` commands, you can browse:
@@ -131,8 +132,11 @@ as the value of it inside `scripts` object as shown below.
   "scripts": {
     "cy:open": "cypress open",
 
-    // we can write any word as a key for our ease, example:
-    "hey_there": "cypress open"
+    // we can write any word of our choice as a key for our ease, example:
+    "john": "cypress open",
+
+    // complex arguments
+    "cy:wow": "cypress open --browser electron --e2e"
   }
 }
 ```
@@ -144,6 +148,6 @@ command as shown below:
 $ npm run cy:open   # using npm
 $ yarn cy:open      # using yarn
 
-$ npm run hey_there # alternative command as shown above
-$ yarn hey_there    # alternative command using yarn
+$ npm run john # alternative command as shown above
+$ yarn cy:wow    # complex arguments
 ```
