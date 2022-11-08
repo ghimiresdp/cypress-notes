@@ -13,9 +13,9 @@ Cypress notes for my students
     3. Environment Setup
     4. Supported Browsers
 2. [Cypress Hello World](course/c02-hello-world.md)
+    1. Cypress Test Runner
     2. Cypress Hello World
     3. Types of testing in cypress
-    4. Basic Commands
 3. [Cypress Command Line](course/c03-commandline.md)
     1. `cypress open` command
     2. `cypress run` command

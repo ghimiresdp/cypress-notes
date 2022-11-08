@@ -6,6 +6,7 @@
 
 **Table of Contents**
 - [Chapter 2: Cypress Hello World](#chapter-2-cypress-hello-world)
+    - [Cypress Test Runner](#cypress-test-runner)
     - [Types of Testing in Cypress](#types-of-testing-in-cypress)
         - [End-to-End Testing (E2E testing)](#end-to-end-testing-e2e-testing)
         - [Component Testing](#component-testing)
@@ -13,6 +14,26 @@
         - [Other Testing](#other-testing)
     - [An example of End-to-End testing in Cypress](#an-example-of-end-to-end-testing-in-cypress)
         - [Writing the first E2E test](#writing-the-first-e2e-test)
+
+## Cypress Test Runner
+
+Cypress Test runner is an interactive runner that allows you to see
+commands as they execute. Test Runner consists of 5 basic components:
+
+1. Test status menu
+2. URL Preview
+3. Control panel
+4. Command log
+5. App preview
+
+![TestRunner](https://docs.cypress.io/_nuxt/img/test-runner.89dac0f.png)
+
+The command log previews whatever test is running and the status of
+currently running test. It shows nested view of each tests as well as
+any command or assertion executed within the test block.
+
+To know more about the test runner, we can check the link below:
+https://docs.cypress.io/guides/core-concepts/cypress-app#The-Test-Runner
 
 ## Types of Testing in Cypress
 
