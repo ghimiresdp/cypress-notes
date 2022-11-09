@@ -5,15 +5,16 @@
 # Chapter 2: Cypress Hello World
 
 **Table of Contents**
+
 - [Chapter 2: Cypress Hello World](#chapter-2-cypress-hello-world)
-    - [Cypress Test Runner](#cypress-test-runner)
-    - [Types of Testing in Cypress](#types-of-testing-in-cypress)
-        - [End-to-End Testing (E2E testing)](#end-to-end-testing-e2e-testing)
-        - [Component Testing](#component-testing)
-        - [API Testing](#api-testing)
-        - [Other Testing](#other-testing)
-    - [An example of End-to-End testing in Cypress](#an-example-of-end-to-end-testing-in-cypress)
-        - [Writing the first E2E test](#writing-the-first-e2e-test)
+  - [Cypress Test Runner](#cypress-test-runner)
+  - [Types of Testing in Cypress](#types-of-testing-in-cypress)
+    - [End-to-End Testing (E2E testing)](#end-to-end-testing-e2e-testing)
+    - [Component Testing](#component-testing)
+    - [API Testing](#api-testing)
+    - [Other Testing](#other-testing)
+  - [An example of End-to-End testing in Cypress](#an-example-of-end-to-end-testing-in-cypress)
+    - [Writing the first E2E test](#writing-the-first-e2e-test)
 
 ## Cypress Test Runner
 
@@ -33,11 +34,11 @@ currently running test. It shows nested view of each tests as well as
 any command or assertion executed within the test block.
 
 To know more about the test runner, we can check the link below:
-https://docs.cypress.io/guides/core-concepts/cypress-app#The-Test-Runner
+<https://docs.cypress.io/guides/core-concepts/cypress-app#The-Test-Runner>
 
 ## Types of Testing in Cypress
 
-Ref: https://docs.cypress.io/guides/overview/why-cypress#Test-types
+Ref: <https://docs.cypress.io/guides/overview/why-cypress#Test-types>
 
 ### End-to-End Testing (E2E testing)
 
@@ -106,10 +107,9 @@ hundreds of other components, libraries, and frameworks. please check
 [Plugins directory](https://docs.cypress.io/plugins/directory) to know supported
 testing plugins in cypress.
 
-
 ## An example of End-to-End testing in Cypress
 
-> **ref**: https://docs.cypress.io/guides/end-to-end-testing/writing-your-first-end-to-end-test
+> **ref**: <https://docs.cypress.io/guides/end-to-end-testing/writing-your-first-end-to-end-test>
 
 To perform an E2E testing, we need to do the following procedure:
 
@@ -159,7 +159,7 @@ describe('empty spec', () => {
 })
 ```
 
-The code block above will visit https://example.cypress.io and the test will be
+The code block above will visit <https://example.cypress.io> and the test will be
 passed since there is nothing to assert.
 
 If we try to assert something that should fail, then it will fail the test. For
@@ -175,7 +175,6 @@ describe('empty spec', () => {
 ```
 
 ![Assertion Error](res/c02-003.png)
-
 
 Similarly, if we write something that should pass, then it should again pass
 all the tests. To test this, we replace the line
