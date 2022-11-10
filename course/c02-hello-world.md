@@ -180,7 +180,7 @@ example, if we add a line as shown below, then the test case will fail.
 describe('empty spec', () => {
   it('passes', () => {
     cy.visit('https://example.cypress.io')
-++  expect(true).to.equal(false)
+++  expect(true).to.be.equal(false)
   })
 })
 ```
@@ -189,15 +189,15 @@ describe('empty spec', () => {
 
 Similarly, if we write something that should pass, then it should again pass
 all the tests. To test this, we replace the line
-`expect(true).to.equal(false)` with `expect(true).to.equal(true)` as shown
+`expect(true).to.be.equal(false)` with `expect(true).to.be.equal(true)` as shown
 below:
 
 ```diff
 describe('empty spec', () => {
   it('passes', () => {
     cy.visit('https://example.cypress.io')
---  expect(true).to.equal(false)
-++  expect(true).to.equal(true)
+--  expect(true).to.be.equal(false)
+++  expect(true).to.be.equal(true)
   })
 })
 ```
