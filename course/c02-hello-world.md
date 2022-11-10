@@ -15,6 +15,7 @@
     - [Other Testing](#other-testing)
   - [An example of End-to-End testing in Cypress](#an-example-of-end-to-end-testing-in-cypress)
     - [Writing the first E2E test](#writing-the-first-e2e-test)
+      - [The `describe` block](#the-describe-block)
 
 ## Cypress Test Runner
 
@@ -158,6 +159,16 @@ describe('empty spec', () => {
   })
 })
 ```
+
+#### The `describe` block
+
+Here, the `describe()` function takes 2 arguments, i.e. name of the function and
+a callback function. The `it()` function contains our actual test procedure. It
+also takes 2 arguments which is similar to the `describe` block. the body of
+`it()` function contains all the test cases. In the above example we added
+`cy.visit()` which browses `https://example.cypress.io` and displays the page
+in the browser window.
+
 
 The code block above will visit <https://example.cypress.io> and the test will be
 passed since there is nothing to assert.
