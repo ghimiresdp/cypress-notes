@@ -1,12 +1,13 @@
+# Chapter 2: Cypress Hello World
+
 - **created by**: Sudip Ghimire
 - **URL**: [https://www.sudipghimire.com.np](https://www.sudipghimire.com.np)
 - **Github**: [https://github.com/ghimiresdp](https://github.com/ghimiresdp)
 
-# Chapter 2: Cypress Hello World
-
-**Table of Contents**
+## Table of Contents
 
 - [Chapter 2: Cypress Hello World](#chapter-2-cypress-hello-world)
+  - [Table of Contents](#table-of-contents)
   - [Cypress Test Runner](#cypress-test-runner)
   - [Types of Testing in Cypress](#types-of-testing-in-cypress)
     - [End-to-End Testing (E2E testing)](#end-to-end-testing-e2e-testing)
@@ -169,7 +170,6 @@ also takes 2 arguments which is similar to the `describe` block. the body of
 `cy.visit()` which browses `https://example.cypress.io` and displays the page
 in the browser window.
 
-
 The code block above will visit <https://example.cypress.io> and the test will be
 passed since there is nothing to assert.
 
@@ -204,3 +204,6 @@ describe('empty spec', () => {
 
 here, the value `true` is asserted to `true` which means the expected value and
 obtained values both are true hence the test passes.
+
+for more lecture examples, please check:
+[Chapter 2 Code Samples](https://github.com/ghimiresdp/cypress-notes/blob/main/cypress/e2e/c001-intro.cy.js).

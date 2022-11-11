@@ -118,11 +118,12 @@ for the following purposes:
 3. Run tests
 4. debug tests
 
-**Types of tests done with the help of cypress**
+Types of tests done with the help of cypress:
 
 1. End-to-end test
 2. Integration Test
 3. Unit Test
+4. API Test
 
 ### Advantages of cypress
 
