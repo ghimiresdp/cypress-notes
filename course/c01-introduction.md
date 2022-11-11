@@ -23,15 +23,16 @@
   - [Introduction to Cypress](#introduction-to-cypress)
     - [Advantages of cypress](#advantages-of-cypress)
     - [Disadvantages of Cypress](#disadvantages-of-cypress)
-  - [Installing Visual Studio code](#installing-visual-studio-code)
-  - [Installing Node.js](#installing-nodejs)
-  - [Installing Cypress](#installing-cypress)
-    - [1. Installing via npm or yarn](#1-installing-via-npm-or-yarn)
-    - [2. Downloading cypress binary](#2-downloading-cypress-binary)
-  - [Supported Browsers](#supported-browsers)
-  - [Opening the cypress executable](#opening-the-cypress-executable)
-    - [1. Using command line](#1-using-command-line)
-    - [2. adding run scripts in the package.json file](#2-adding-run-scripts-in-the-packagejson-file)
+  - [Environment Setup](#environment-setup)
+    - [Installing Visual Studio code](#installing-visual-studio-code)
+    - [Installing Node.js](#installing-nodejs)
+    - [Installing Cypress](#installing-cypress)
+      - [1. Installing via npm or yarn](#1-installing-via-npm-or-yarn)
+      - [2. Downloading cypress binary](#2-downloading-cypress-binary)
+    - [Supported Browsers](#supported-browsers)
+    - [Opening the cypress executable](#opening-the-cypress-executable)
+      - [1. Using command line](#1-using-command-line)
+      - [2. adding run scripts in the package.json file](#2-adding-run-scripts-in-the-packagejson-file)
 
 ## Introduction to Software Testing
 
@@ -144,7 +145,10 @@ for the following purposes:
 - We cannot perform Mobile testing with Cypress
 - DOM cannot be accessed
 
-## Installing Visual Studio code
+
+## Environment Setup
+
+### Installing Visual Studio code
 
 Although you can use any text editor to write your automation scripts, vscode
 will be much more easier since it has first-class support for javascript and is
@@ -153,7 +157,7 @@ link:
 
 [https://code.visualstudio.com/download](https://code.visualstudio.com/download)
 
-## Installing Node.js
+### Installing Node.js
 
 As Cypress is a front-end testing framework which is built on the top of
 javascript framework, we need node.js to be installed in our system.
@@ -162,12 +166,12 @@ To install Node.js we can just download the binary from
  [https://nodejs.org](https://nodejs.org). We are strongly encouraged to
  download the LTS version of Node.js.
 
-## Installing Cypress
+### Installing Cypress
 
 Cypress comes both as a standalone binary and as a node.js library. As a
 beginner, we can install cypress by 2 different ways:
 
-### 1. Installing via npm or yarn
+#### 1. Installing via npm or yarn
 
 We can easily install the cypress inside our workspace with `NPM` or `Yarn`.
 
@@ -205,7 +209,7 @@ yarn global add cypress   # global install
 > [Node.JS release schedule](https://github.com/nodejs/release#release-schedule)
 > page.
 
-### 2. Downloading cypress binary
+#### 2. Downloading cypress binary
 
 You can directly download the cypress binary from
 [https://download.cypress.io/desktop](https://download.cypress.io/desktop) if
@@ -217,7 +221,7 @@ variables.
 > like `npm` or `yarn` since it is easy to manage the version and update it
 > whenever needed_
 
-## Supported Browsers
+### Supported Browsers
 
 Cypress Supports wide varieties of browsers.
 
@@ -228,11 +232,11 @@ Cypress Supports wide varieties of browsers.
 5. Electron
 6. Webkit (Experimental)
 
-## Opening the cypress executable
+### Opening the cypress executable
 
 You can easily open the cypress executable using different ways:
 
-### 1. Using command line
+#### 1. Using command line
 
 You can go to your project directory in your terminal and run any of the
 following commands:
@@ -242,7 +246,7 @@ npx cypress open  # using npx
 yarn run cypress open # using yarn
 ```
 
-### 2. adding run scripts in the package.json file
+#### 2. adding run scripts in the package.json file
 
 If you are already familiar with node.js scripts, you can just add `cypress run`
 as your run configuration in your `package.json` file.
