@@ -17,6 +17,17 @@
   - [An example of End-to-End testing in Cypress](#an-example-of-end-to-end-testing-in-cypress)
     - [Writing the first E2E test](#writing-the-first-e2e-test)
       - [The `describe` block](#the-describe-block)
+  - [Variables and Aliases in cypress](#variables-and-aliases-in-cypress)
+    - [Variables](#variables)
+    - [Aliases](#aliases)
+  - [Cypress Command Line](#cypress-command-line)
+    - [The `cypress open` command](#the-cypress-open-command)
+      - [opening specific browser with commandline](#opening-specific-browser-with-commandline)
+      - [opening e2e test with command line](#opening-e2e-test-with-command-line)
+    - [The `cypress run` command](#the-cypress-run-command)
+      - [selecting specification file](#selecting-specification-file)
+      - [selecting specific browser](#selecting-specific-browser)
+    - [Adding cypress commands to `package.json`](#adding-cypress-commands-to-packagejson)
 
 ## Cypress Test Runner
 
@@ -207,3 +218,195 @@ obtained values both are true hence the test passes.
 
 for more lecture examples, please check:
 [Chapter 2 Code Samples](https://github.com/ghimiresdp/cypress-notes/blob/main/cypress/e2e/c001-intro.cy.js).
+
+## Variables and Aliases in cypress
+
+### Variables
+
+As cypress scripting is performed using javascript so we can use javascript
+style variable declaration using `let`, `var`, and `const`.
+
+> **Note**: To learn cypress, you must have a knowledge of javascript. A
+> knowledge of ES6 (also known as ES2015) is recommended for learning this
+> course. You can check [ES6 Homepage](https://262.ecma-international.org/6.0/)
+> to know more about ES6.
+
+```js
+describe('Example Spec', () => {
+  it('passes', () => {
+    const domain = 'https://example.cypress.io'
+    cy.visit(domain)
+
+    it('heading test', () => {
+        cy.get('div.banner').then($banner =>{
+            cy.get('h1').then($heading => {
+                let value = $heading.text()
+                expect(value).to.be.equal('Kitchen Sink')
+            })
+        });
+    });
+  })
+})
+```
+
+In the code snippet above, `domain` is defined as a constant. A constant is an
+immutable variable whose value can not be changed once initialized.
+
+The snippet above shows that the variable `value` is defined which can be used
+in the future without again querying `$heading.text()`.
+
+### Aliases
+
+Using `then` might not work in every situation. If we want to get value of a
+variable in the next code block, then using alias will be useful. To achieve
+such, we need to create an alias using `.as()` method after invoking the
+element.
+
+```js
+
+```
+
+---
+
+## Cypress Command Line
+
+### The `cypress open` command
+
+Once cypress is installed globally (or added to path), we can access
+the cypress command line feature. Alternatively, if we have added
+cypress locally to specific project, then we can access it with our
+respective package manager.
+
+**If cypress is globally installed and added to path**
+
+```shell
+cypress open
+./node_modules/cypress/bin/cypress open
+```
+
+**Running cypress binary from `node-modules` directory**
+
+```shell
+./node_modules/cypress/bin/cypress open
+```
+
+**Using `npx` command**
+
+```shell
+npx cypress open
+```
+
+**Using `yarn` command**
+
+```shell
+yarn cypress open
+```
+
+> **Note**: This tutorial will be assuming you to be using npx or yarn
+> package manager. so you would expect commands like
+> `npx cypress open` or `yarn cypress open`. However, you may use
+> your preferred way of running the executable.
+
+#### opening specific browser with commandline
+
+we can pass `--browser` and our preferred browsers to open cypress. the
+list of available browsers are:
+
+- `electron`
+- `chrome`
+- `chromium`
+- `chrome:canary`
+- `edge`
+- `firefox`
+
+> **Note**: You need to have the browser installed before you select
+> to test with it.
+
+```shell
+npx cypress open --browser electron
+```
+
+#### opening e2e test with command line
+
+we can pass `--e2e` command to run e2e test directly from commandline
+
+```shell
+yarn cypress open --e2e
+yarn cypress open --e2e --browser electron
+```
+
+### The `cypress run` command
+
+The `cypress run` command runs all the test files that is defined in
+our specification.
+
+```shell
+cypress run
+```
+
+#### selecting specification file
+
+If we want to run specific test file only, we can pass `--spec` argument
+and the path of the specification file to run tests on.
+
+Example:
+
+```shell
+npx cypress run --spec cypress/e2e/spec.cy.js
+```
+
+#### selecting specific browser
+
+We can select specific browser to run our specification by passing
+`--browser` or `-b` argument and the supported browser. we can pass
+`--headed` argument to display the browser window if we want.
+
+```shell
+npx cypress run --browser edge
+npx cypress run --browser electron
+npx cypress run --browser electron --headed
+npx cypress run --browser electron --headed --spec cypress/e2e/spec.cy.js
+```
+
+To know more about cypress `run` commands, you can browse:
+
+<https://docs.cypress.io/guides/guides/command-line#cypress-run>
+
+### Adding cypress commands to `package.json`
+
+Alternatively, we could add `scripts` in  `package.json` file so that
+our package manager would automatically run when we try to run our
+custom scripts. To do so, we should add some key and the cypress command
+as the value of it inside `scripts` object as shown below.
+
+> **Note** the example key `cy:run` can be replaced with any key of our
+> choice
+
+```json5
+{
+  "scripts": {
+    "cy:open": "cypress open",
+
+    // we can write any word of our choice as a key for our ease, example:
+    "john": "cypress open",
+
+    // complex arguments
+    "cy:wow": "cypress open --browser electron --e2e"
+  }
+}
+```
+
+To run the script from the package manager, we can easily use run
+command as shown below:
+
+```shell
+npm run cy:open   # using npm
+yarn cy:open      # using yarn
+
+npm run john # alternative command as shown above
+yarn cy:wow    # using simple command to run complex arguments
+```
+
+Please visit the page:
+[Command Line | Cypress Documentation](https://docs.cypress.io/guides/guides/command-line#What-you-ll-learn)
+to know more about cypress command line.

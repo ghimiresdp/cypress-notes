@@ -1,11 +1,12 @@
+# Chapter 1: Introduction
+
 - **created by**: Sudip Ghimire
 - **URL**: [https://www.sudipghimire.com.np](https://www.sudipghimire.com.np)
 - **Github**: [https://github.com/ghimiresdp](https://github.com/ghimiresdp)
 
-# Chapter 1: Introduction
-
 > **Note**: Most of the information below has references from the
-> [official documentation](https://docs.cypress.io/) page of cipher. If you want
+> [official documentation](https://docs.cypress.io/) page of cypress. If you
+> want
 > to know more about cypress or learn yourself, you can check
 > [https://docs.cypress.io/](https://docs.cypress.io/).
 
@@ -145,7 +146,6 @@ Types of tests done with the help of cypress:
 - It's scope is only front-end testing
 - We cannot perform Mobile testing with Cypress
 - DOM cannot be accessed
-
 
 ## Environment Setup
 
