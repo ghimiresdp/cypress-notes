@@ -60,3 +60,10 @@ Cypress notes for my students
     1. Cypress Plugins List
     2. Installing Cypress Plugins
     3. Using Plugins
+
+-----
+
+## Resources and References
+
+- Cypress Documentation: https://docs.cypress.io
+- HTML Template: https://bootstrapmade.com/zenblog-bootstrap-blog-template/
