@@ -20,10 +20,10 @@ Cypress notes for my students
     4. variables and aliases
     5. Running Tests in Supported Browsers
     6. Cypress Command Line
-3. [Cypress Selectors](course/)
+3. [Cypress Selectors](course/c03-selectors.md)
     1. Introduction to CSS Selector
     2. Auto Generating CSS Selector
-4. [Assertions](course/)
+4. [Assertions](course/c04-assertion.md)
     1. Basic Assertion in writing
     2. Common Assertions
     3. Negative Assertions
