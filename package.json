@@ -7,6 +7,7 @@
   "scripts": {
     "cy:run": "cypress run",
     "cy:open": "cypress open",
-    "cy:wow": "cypress open --browser electron --e2e"
+    "cy:wow": "cypress open --browser electron --e2e",
+    "cy:ff": "cypress open --browser firefox --e2e"
   }
 }
