@@ -1,0 +1,27 @@
+describe('Asserting HTML Elements', () => {
+  describe('Asserting elements from the homepage', () => {
+    beforeEach('visit homepage', () => {
+      cy.visit('https://example.cypress.io');
+    })
+
+    it('This page tests whether the title contains "Kitchen sink"', () => {
+      cy.get('h1').then($element=>{
+        expect($element.text()).to.eq('Kitchen Sink')
+      })
+    });
+
+  });
+
+  describe('Asserting elements from the todo page', () => {
+    beforeEach('visit todo page', () => {
+      cy.visit('https://example.cypress.io/todo');
+    })
+
+    it('This page tests whether the todo list contains 2 elements', () => {
+      cy.get('.todo-list li').then($elem =>{
+        expect($elem.length).to.be.eq(2)
+      })
+    });
+
+  });
+})
