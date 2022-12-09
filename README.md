@@ -24,15 +24,14 @@ Cypress notes for my students
     1. Introduction to CSS Selector
     2. Auto Generating CSS Selector
 4. [Assertions](course/c04-assertion.md)
-    1. Basic Assertion in writing
-    2. Common Assertions
-    3. Negative Assertions
-    4. Chai Assertion
+    1. Basic Assertions
+    2. Negative Assertions
+    3. Chai Assertion
         1. BDD Assertions
         2. TDD Assertions
-    5. Should Callback
-    6. Multiple Assertions
-5. [Interacting with UI elements](course/)
+    4. Should Callback
+    5. Multiple Assertions
+5. [Interacting with UI elements](course/c05-interacting-with-ui.md)
     1. Handling Clicks (button, check box, radio button, etc.)
     2. Handling double clicks and right clicks
     3. Handling Type events (text box, calendar, etc.)
