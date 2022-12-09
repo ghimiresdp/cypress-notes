@@ -7,12 +7,15 @@
 ## Table of Contents
 
 - [Chapter 4: Variables and aliases](#chapter-4-variables-and-aliases)
-    - [Table of Contents](#table-of-contents)
-    - [Chai Assertions](#chai-assertions)
-        - [BDD Assertion](#bdd-assertion)
-        - [TDD Assertion](#tdd-assertion)
-        - [chaining with `should`](#chaining-with-should)
-            - [Common Assertions](#common-assertions)
+  - [Table of Contents](#table-of-contents)
+  - [Chai Assertions](#chai-assertions)
+    - [BDD Assertion](#bdd-assertion)
+    - [TDD Assertion](#tdd-assertion)
+  - [Asserting with `should()` and `chainers`](#asserting-with-should-and-chainers)
+    - [Common Assertions](#common-assertions)
+    - [`should()` and `then()`](#should-and-then)
+    - [`should` callbacks](#should-callbacks)
+    - [`should` callbacks with multiple assertions](#should-callbacks-with-multiple-assertions)
 
 ## Chai Assertions
 
