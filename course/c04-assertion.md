@@ -7,12 +7,12 @@
 ## Table of Contents
 
 - [Chapter 4: Variables and aliases](#chapter-4-variables-and-aliases)
-  - [Table of Contents](#table-of-contents)
-  - [Chai Assertions](#chai-assertions)
-    - [BDD Assertion](#bdd-assertion)
-    - [TDD Assertion](#tdd-assertion)
-    - [chaining with `should`](#chaining-with-should)
-      - [Common Assertions](#common-assertions)
+    - [Table of Contents](#table-of-contents)
+    - [Chai Assertions](#chai-assertions)
+        - [BDD Assertion](#bdd-assertion)
+        - [TDD Assertion](#tdd-assertion)
+        - [chaining with `should`](#chaining-with-should)
+            - [Common Assertions](#common-assertions)
 
 ## Chai Assertions
 
@@ -27,8 +27,8 @@ it('This test passes', () => {
 })
 
 // Example assertion that asserts the text `John Doe` contains `John`.
-it('comparing string values', ()=>{
-    let singer="John Doe"
+it('comparing string values', () => {
+    let singer = "John Doe"
     expect(singer).to.include('John')
 })
 
@@ -49,21 +49,21 @@ To know more about BDD in cypress, please refer to the following urls
 
 ```js
 // equal assertion
-it(".equal assertion",()=>{
+it(".equal assertion", () => {
     cy.get('.pt-5 > h2').then(($heading) => {
         expect($heading.text()).to.equal("Getting Started");
     });
 });
 
 // not assertion
-it(".not assertion",()=>{
+it(".not assertion", () => {
     cy.get('.pt-5 > h2').then(($heading) => {
         expect($heading.text()).to.not.equal("Cypress API");
     });
 });
 
 // ordered assertion
-it(".ordered",()=>{
+it(".ordered", () => {
     let x = [1, 2, 4, 5, 6]
     let y = [1, 4, 3, 2]
     expect(x).to.not.have.ordered.members(y)
@@ -103,7 +103,7 @@ it("TDD Assertions", () => {
         };
         assert.deepEqual(person, person);
         assert.notDeepEqual(person, {some_key: 'some value'});
-        assert.deepInclude(person, { age: 20 }, "this test should pass here");
+        assert.deepInclude(person, {age: 20}, "this test should pass here");
 
         // hasAllDeepKeys, hasAnyDeepKeys
         assert.hasAllDeepKeys(person1, person2);
@@ -112,13 +112,17 @@ it("TDD Assertions", () => {
 });
 ```
 
-### chaining with `should`
+## Asserting with `should()` and `chainers`
 
-```js
+Cypress also includes assertions with `should()` which has 4 different methods
+to assert values.
 
-```
+1. `.should(chainers)`
+2. `.should(chainers, value)`
+3. `.should(chainers, method, value)`
+4. `.should(callbackFn)`
 
-#### Common Assertions
+### Common Assertions
 
 | title       | example chainer  | example statement                          |
 |-------------|------------------|--------------------------------------------|
@@ -133,3 +137,55 @@ it("TDD Assertions", () => {
 | state       | `'be.checked'`   | `cy.get(':radio').should('be.checked')`    |
 | css         | `'have.css'`     | `el.should('have.css', 'display', 'none')` |
 | disabled    | `'be.disabled'`  | `el.should('be.disabled')`                 |
+
+**Examples**:
+
+```js
+cy.get('.error').should('be.empty') // Assert that '.error' is empty
+cy.contains('Login').should('be.visible') // Assert that el is visible
+cy.wrap({ foo: 'bar' }).its('foo').should('eq', 'bar') // Assert the 'foo'
+cy.get('form').should('have.class', 'form-horizontal')
+cy.get('#header a').should('have.attr', 'href', '/users')
+
+
+// wrong chainer
+cy.should('eq', '42') // Should not be chained off 'cy'
+
+```
+
+### `should()` and `then()`
+
+```js
+cy.get('button')
+  .should('have.id', 'new-user')
+  .then(($button) => {
+    // $button is yielded
+  })
+```
+
+### `should` callbacks
+
+When the inbuilt assertions are not enough, we can create our own assertions
+using `should` callback.
+
+```js
+cy.get('div').should(($div) => {
+  expect($div).to.have.length(1)
+
+  const className = $div[0].className
+
+  // className will be a string like "main-abc123 heading-xyz987"
+  expect(className).to.match(/heading-/)
+})
+```
+
+### `should` callbacks with multiple assertions
+We can use multiple assertions with `and` chainer and another callback as shown
+below:
+
+```js
+cy.get('[data-testid="assertions-link"]')
+  .should('have.class', 'active')
+  .and('have.attr', 'href')
+  .and('include', 'cypress.io')
+```
