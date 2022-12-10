@@ -22,11 +22,6 @@ p3 = /raj/      // Change your answer here
 p4 = /class/    // Change your answer here
 p5 = /a1/       // Change your answer here
 
-// p2 = /[trs][uia]n/      // Change your answer here
-// p3 = /ra[jm](au)?/      // Change your answer here
-// p4 = /(cl)|(gl)|(r)as[sh](es)?/    // Change your answer here
-// p5 = /[abc][12]/       // Change your answer here
-
 
 
 // ==================================================[ End of answer ]==================================================
